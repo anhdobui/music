@@ -1,0 +1,210 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(204,196,221);; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #eab4b4; 
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #eab4b4; 
+  }
+:root {
+    --primary-color:#eab4b4;
+}
+body {
+    margin-top :50px;
+    background: linear-gradient(21deg, rgba(215,199,250,1) 0%, rgba(192,254,246,1) 11%, rgba(252,232,252,1) 31%, rgba(219,255,254,1) 64%, rgba(253,233,255,1) 89%);
+}
+.container {
+    max-width:900px;
+    width:100%;
+    
+}
+.container-center {
+    margin:0 auto;
+}
+.app{
+}
+/* dashboard */
+.style_layout-block {
+    max-width:410px;
+    padding:35px 30px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius:25px;
+    width:100%;
+    background:#fff;
+    max-height:590px;
+}
+.dashboard {
+    /* position:fixed;
+    top:50px;
+  
+     */
+}
+.dashboard .headding2 {
+    text-align:center;
+    margin:10px 0;
+    /* max-height:28px;
+    overflow: hidden; */
+}
+.dashboard .author_music {
+    font-size:12px;
+    color:#333;
+}
+.status {
+    color:#ff1800;
+    font-size:15px;
+    font-weight:600;
+}
+.dashboard .heading2 {
+    color:#000;
+    font-size:18px;
+    font-weight:700;
+}
+.info_music {
+    margin-bottom:20px;
+}
+
+.info_music .name_music .headding2 {
+   font-size:23px;
+   font-weight:bold;
+}
+.cd {
+    margin-bottom:30px;
+    text-align: center;
+}
+.cd .frames_cd{
+    border:10px solid #ff000073;
+    border-radius:50%;
+    display: inline-block;
+    text-align: center;
+    width:300px;
+    height:300px;
+}
+.cd img {
+    margin: 0 auto;
+    border-radius:50%;
+
+}
+
+.control i {
+    font-size:20px;
+    cursor: pointer;
+}
+.control i:hover ,
+.control .active
+{
+    color:#ff1800;
+    transition:all 0.1s linear;
+}
+.control .control_play >i{
+    color:#ff1800;
+    font-size:50px;
+    display:block;
+}
+.fa-pause-circle {
+    display: none !important;
+}
+.control .playing .fa-pause-circle {
+    display:block !important;
+}
+.control .playing .fa-play-circle {
+    display:none !important;
+}
+
+.progress {
+     width: 100%;
+    -webkit-appearance: none;
+    height: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+.control_progress {
+    padding:10px 15px;
+}
+
+/* list player */
+.playlist.style_layout-block{
+    padding: 0px;
+    overflow-y: auto;
+    max-height: fit-content;
+    max-height:590px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+}
+.box_song {
+    padding:15px 10px;
+    padding-right:5px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+    cursor: pointer;
+    height:117px;
+    overflow: hidden;
+    transition:all 0.5s linear;
+}
+.box_song .frames_img {
+    max-width:80px;
+    border-radius:5px;
+    overflow: hidden;
+    position: relative;
+}
+.box_song .song {
+    height:100%;
+    overflow: hidden;
+}
+.info_song {
+    padding:10px;
+    font-size:16px;
+}
+.info_song .name_song{
+   font-weight:bold;
+   margin-bottom:5px;
+}
+.info_song .author_song{
+   font-weight:400;
+}
+.box_song .option {
+    padding:10px;
+    text-align: center;
+}
+.box_song:hover {
+    background: linear-gradient(188deg, rgba(204,196,221,1) 0%, rgba(154,203,213,1) 100%);
+}
+.box_song:hover .img-zoomin img {
+    overflow: hidden;
+	transform:scale(1.1);
+	opacity: 0.9;
+	transition:all 0.3s ease;
+}
+.box_song.active {
+    background:#c4e7f6;
+   
+}
+.box_song:active {
+    opacity:0.8;
+}
+.box_song.active .frames_img.img-cover.img-zoomin:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content:'';
+    background: url(https://zmp3-static.zmdcdn.me/skins/zmp3-v6.1/images/icons/icon-playing.gif) no-repeat center;
+    background-size:15px;
+    z-index:10;
+}

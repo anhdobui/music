@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./resource/images/favicon/favicon_music.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href=".\resource\fontIcon\font-awesome-4.7.0\css\font-awesome.min.css">
+    <link rel="stylesheet" href="./resource/css/reset.css">
+    <link rel="stylesheet" href="./resource/css/style.css">
+    <title>Music Player</title>
+</head>
+<body>
+    <div class="container container-center">
+        <div class="app flex flex-space-evenly flex-stretch">
+            <div class="dashboard style_layout-block">
+                <!-- CD -->
+                <section class="cd">
+                    <div class="frames_cd img-cover">
+                        <img src="./resource/album/mobinhyen1.gif" alt="" class="">
+                    </div>
+                </section>
+                <section class="info_music">
+                    <div class="name_music">
+                        <h2 class="headding2">Bao tiền một mớ bình yên</h2>
+                    </div>
+                    <div class="author_music">
+                        <h2 class="headding2">14 Casper</h2>
+                    </div>
+                </section>
+               <section class="control">
+                    <div class="flex flex-space-evenly flex-middle">
+                        <div class="control_repeat">
+                            <i class="fa fa-repeat" aria-hidden="true"></i>
+                        </div>
+                        <div class="control_step step-back">
+                            <i class="fa fa-step-backward" aria-hidden="true"></i>
+                        </div>
+                        <div class="control_play">
+                            <i class="fa fa-play-circle" aria-hidden="true"></i>
+                            <i class="fa fa-pause-circle" aria-hidden="true"></i>
+                        </div>
+                        <div class="control_step step-for">
+                            <i class="fa fa-step-forward" aria-hidden="true"></i>
+                        </div>
+                        <div class="control_random ">
+                            <i class="fa fa-random" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="control_progress">
+                        <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+                        <audio id="audio"></audio>
+                    </div>
+               </section>
+               
+            </div>
+            <div class="playlist style_layout-block">
+
+                
+
+            </div>
+        </div>
+    </div>
+    <script src="./resource/js/myJs.js"></script>
+</body>
+</html>
